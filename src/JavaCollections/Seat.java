@@ -1,17 +1,21 @@
 package JavaCollections;
 
 public class Seat implements Comparable<Seat>{
-
+    private double price;
     private final String seatNumber;
     private boolean reserved = false;
 
-    public Seat(String seatNumber) {
-
+    public Seat(String seatNumber, double price) {
+        this.price = price;
         this.seatNumber = seatNumber;
     }
 
     public String getSeatNumber() {
         return seatNumber;
+    }
+
+    public double getPrice() {
+        return price;
     }
 
     public boolean isReserved() {
