@@ -28,6 +28,15 @@ public class MapExample {
 
         System.out.println("====================================");
 
+        System.out.println(languages.remove("Algol", "An algorithm language") ? "Algol removed" : "Algol not removed. Key Value pair not found");
+
+        System.out.println(languages.replace("ReactJS", "A Web dev front-end language",
+                "Dev language for front-end") ?
+                "ReactJS " +
+                "replaced" : "ReactJS was not replaced");
+
+        System.out.println(languages.replace("Scala", "This is not found"));
+
         for(String key: languages.keySet()) {
             System.out.println(key + " : " + languages.get(key));
         }
