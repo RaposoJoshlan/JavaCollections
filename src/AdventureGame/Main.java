@@ -23,19 +23,46 @@ public class Main {
         locations.put(5, new Location(5, "Computer learning C"));
         locations.put(6, new Location(6, "Computer " + "learning Python"));
 
+        locations.get(1).addExit("W", 2);
+        locations.get(1).addExit("E", 3);
+        locations.get(1).addExit("S", 4);
+        locations.get(1).addExit("N", 5);
+        //locations.get(1).addExit("Q", 0);
+
+        locations.get(2).addExit("N", 5);
+        //locations.get(2).addExit("Q", 0);
+
+        locations.get(3).addExit("W", 1);
+        //locations.get(3).addExit("Q", 0);
+
+        locations.get(4).addExit("N", 1);
+        locations.get(4).addExit("W", 2);
+        //locations.get(4).addExit("Q", 0);
+
+        locations.get(5).addExit("S", 1);
+        locations.get(5).addExit("W", 2);
+        //locations.get(5).addExit("Q", 0);
+
         int loc = 1;
 
         while (true) {
             System.out.println(locations.get(loc).getDescription());
-            if(loc == 0) {
+            if (loc == 0) {
                 break;
             }
 
-            loc = scanner.nextInt();
+            Map<String, Integer> exits = locations.get(loc).getExits();
 
-            if(!locations.containsKey(loc)) {
-                System.out.println("You cannot go in that direction");
+            System.out.print("Available exits are ");
+            for (String exit : exits.keySet()) {
+                System.out.print(exit + ", ");
             }
+            System.out.println();
+
+            String direction = scanner.nextLine().toUpperCase();
+
+            System.out.println(exits.containsKey(direction) ? loc = exits.get(direction) : "You cannot go in that " +
+                    "direction");
         }
     }
 }
