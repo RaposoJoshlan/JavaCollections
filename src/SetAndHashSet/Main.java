@@ -6,7 +6,7 @@ import java.util.*;
  * Created on 05/04/2022
  */
 
-public class Main {
+class Main {
 
     /**
      * Sets have no order defined and a set cannot contain duplicates

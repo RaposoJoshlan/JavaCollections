@@ -7,7 +7,7 @@ import java.util.Set;
  * Created on 05/04/2022
  */
 
-public final class HeavenlyBody {
+final class HeavenlyBody {
     private final String name;
     private final double orbitalPeriod;
     private final Set<HeavenlyBody> satellites;
@@ -36,16 +36,24 @@ public final class HeavenlyBody {
 
     @Override
     public boolean equals(Object obj) {
-        if(this == obj) {
+        if (this == obj) {
             return true;
         }
+
         System.out.println("obj.getClass() is " + obj.getClass());
         System.out.println("this.getClass() is " + this.getClass());
-        if((obj == null) || (obj.getClass() != this.getClass())) {
+
+        if ((obj == null) || (obj.getClass() != this.getClass())) {
             return false;
         }
 
         String objName = ((HeavenlyBody) obj).getName();
         return this.name.equals(objName);
+    }
+
+    @Override
+    public int hashCode() {
+        System.out.println("Hashcode called");
+        return this.name.hashCode() + 57;
     }
 }
