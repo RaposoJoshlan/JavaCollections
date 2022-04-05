@@ -14,8 +14,8 @@ public class Main {
      * There is no way to retrieve an item from a set. It only permits if the item exists
      * */
 
-    private static Map<String, HeavenlyBody> solarSystem = new HashMap<>();
-    private static Set<HeavenlyBody> planets = new HashSet<>();
+    private static final Map<String, HeavenlyBody> solarSystem = new HashMap<>();
+    private static final Set<HeavenlyBody> planets = new HashSet<>();
 
     public static void main(String[] args) {
         HeavenlyBody temp = new HeavenlyBody("Mercury", 88);
@@ -62,5 +62,16 @@ public class Main {
         for (HeavenlyBody moon: moons) {
             System.out.println("\t" + moon.getName());
         }
+
+        HeavenlyBody venus = new HeavenlyBody("Venus", 842);
+        planets.add(venus);
+
+        for (HeavenlyBody planet: planets) {
+            System.out.println(planet.getName() + " : " + planet.getOrbitalPeriod());
+        }
+
+        Object o = new Object();
+        o.equals(o);
+        "pluto".equals("");
     }
 }
