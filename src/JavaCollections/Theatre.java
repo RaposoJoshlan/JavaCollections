@@ -2,7 +2,7 @@ package JavaCollections;
 
 import java.util.*;
 
-public class Theatre {
+class Theatre {
 
     public final String theatreName;
 

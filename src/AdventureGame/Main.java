@@ -8,7 +8,7 @@ import java.util.Scanner;
  * Created on 04/04/2022
  */
 
-public class Main {
+class Main {
 
     private static Map<Integer, Location> locations = new HashMap<>();
 

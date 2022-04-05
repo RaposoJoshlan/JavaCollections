@@ -7,7 +7,7 @@ import java.util.Map;
  * Created on 04/04/2022
  */
 
-public class Location {
+class Location {
     private final int locationId;
     private final String description;
     private final Map<String, Integer> exits;

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Main {
+class Main {
 
     public static void main(String[] args) {
         Theatre theatre = new Theatre("Olympian", 8, 12);

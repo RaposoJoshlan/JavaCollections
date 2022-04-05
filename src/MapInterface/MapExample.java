@@ -6,7 +6,7 @@ import java.util.*;
  * Created on 04/04/2022
  */
 
-public class MapExample {
+class MapExample {
     public static void main(String[] args) {
         Map<String, String> languages = new HashMap<>();
 

@@ -1,6 +1,6 @@
 package JavaCollections;
 
-public class Seat implements Comparable<Seat>{
+class Seat implements Comparable<Seat>{
     private double price;
     private final String seatNumber;
     private boolean reserved = false;
